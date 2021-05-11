@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="AgendamientoTagliacozzo.SeleccioneFecha">
+    <ContentPage.Content>
+        <StackLayout Margin="0,35,10,0">
+
+            <Image Source="RIS_IBERIA.jpg"
+               HeightRequest="250"
+               HorizontalOptions="Center"/>
+
+
+            <Frame BackgroundColor="Blue" Padding="24" CornerRadius="0">
+
+                <Label Text="Seleccione una fecha y hora para verificar disponibilidad en la agenda" HorizontalTextAlignment="Center" TextColor="White"
+           HorizontalOptions="Center"
+           VerticalOptions="CenterAndExpand" />
+
+
+            </Frame>
+            <!--calendario para seleccionar una fecha disponible-->
+
+            <DatePicker x:Name="datepicker"
+                                 Format="yyyy_MM_dd"/>
+
+            <!--reloj tipo 12 horas com AM y PM-->
+
+            <!--<TimePicker x:Name="TimePicker12">
+                <TimePicker.Format>hh:mm tt</TimePicker.Format>
+            </TimePicker>-->
+
+            <!--reloj tipo 24 horas-->
+
+            <TimePicker x:Name="TimePicker24">
+                <TimePicker.Format>HH:mm</TimePicker.Format>
+            </TimePicker>
+
+
+        
+
+            <Button x:Name="btnDisponibilidad" Text="Validar Disponibilidad" Clicked="btnDisponibilidad_Clicked"></Button>
+
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

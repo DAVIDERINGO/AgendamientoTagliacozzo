@@ -6,15 +6,18 @@
              mc:Ignorable="d"
              x:Class="AgendamientoTagliacozzo.Ingreso">
     <ContentPage.Content>
-        <StackLayout>
 
-            <Image Source="https://sbsconsulting.com.ec/wp-content/uploads/2018/01/LOGO-UISRAEL-768x209.png"
-               HeightRequest="150" />
+       
+        <StackLayout Margin="0,25,10,0">
 
+            <Image Source="RIS_IBERIA.jpg"
+               HeightRequest="150"
+               HorizontalOptions="Center"/>
 
+           
             <Frame BackgroundColor="Blue" Padding="24" CornerRadius="0">
 
-                <Label Text="LOGIN usuario" HorizontalTextAlignment="Center" TextColor="White"
+                <Label Text="Bienvenido al sistema de agendamiento RIS (Sistema de Información Radiológica)" HorizontalTextAlignment="Center" TextColor="White"
            HorizontalOptions="Center"
            VerticalOptions="CenterAndExpand" />
 
@@ -25,7 +28,9 @@
             <Entry x:Name="txtDato2" Placeholder="Ingrese Clave" IsPassword="True"></Entry>
 
             <Button x:Name="btnValidar" Text="Validar" Clicked="btnValidar_Clicked"></Button>
-
+            <Entry Text="Advmedical" x:Name="txtNombreUbica"></Entry>
+            <Label Text="Para encontrar nuestra ubicacion hacer clic en el boton ir a" />
+            <Button x:Name="btnUbicacion" Text="Ir a" Clicked="btnUbicacion_Clicked"></Button>
 
         </StackLayout>
     </ContentPage.Content>

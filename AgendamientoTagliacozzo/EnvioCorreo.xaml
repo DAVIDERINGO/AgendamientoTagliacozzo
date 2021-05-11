@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AgendamientoTagliacozzo.EnvioCorreo">
+    <ContentPage.Content>
+        <StackLayout Margin="0,25,10,0">
+
+            <Image Source="RIS_IBERIA.jpg"
+               HeightRequest="150"
+               HorizontalOptions="Center"/>
+
+
+            <Frame BackgroundColor="Blue" Padding="24" CornerRadius="0">
+
+                <Label Text="Haga Clic en enviar e ingrese la informacion solicitada para poder generar su usuario" HorizontalTextAlignment="Center" TextColor="White"
+           HorizontalOptions="Center"
+           VerticalOptions="CenterAndExpand" />
+
+
+            </Frame>
+
+            <Button x:Name="EnviarCorreo" Text="Enviar" Clicked="EnviarCorreo_Clicked"></Button>
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -10,7 +10,8 @@ namespace AgendamientoTagliacozzo
         {
             InitializeComponent();
 
-            MainPage = new MainPage();
+            MainPage = new NavigationPage(new Ingreso());
+
         }
 
         protected override void OnStart()
