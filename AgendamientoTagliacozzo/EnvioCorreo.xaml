@@ -20,7 +20,11 @@
             </Frame>
 
             <Button x:Name="EnviarCorreo" Text="Enviar" Clicked="EnviarCorreo_Clicked"></Button>
-
+            
+            
+            <Label Text=" Para mas información o ayuda tecnica comunicarse con 0994525518" HorizontalTextAlignment="Center" TextColor="Blue"
+           HorizontalOptions="Center"
+           VerticalOptions="CenterAndExpand" />
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

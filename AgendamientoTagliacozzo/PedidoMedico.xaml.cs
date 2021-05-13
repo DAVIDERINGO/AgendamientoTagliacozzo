@@ -13,9 +13,10 @@ namespace AgendamientoTagliacozzo
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class PedidoMedico : ContentPage
     {
-        public PedidoMedico()
+        public PedidoMedico(string usuario)
         {
             InitializeComponent();
+            lblUser.Text =  usuario;
         }
 
         private async void btnSeleccionarFoto_Clicked(object sender, EventArgs e)
@@ -37,7 +38,8 @@ namespace AgendamientoTagliacozzo
 
         private async void btnSeleccionarHorario_Clicked(object sender, EventArgs e)
         {
-            await Navigation.PushAsync(new SeleccioneEstudio());
+            var usuario = lblUser.Text;
+            await Navigation.PushAsync(new SeleccioneEstudio(usuario));
         }
     }
 }

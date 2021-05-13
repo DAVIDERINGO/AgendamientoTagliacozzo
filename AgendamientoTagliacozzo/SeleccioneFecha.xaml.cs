@@ -12,14 +12,21 @@ namespace AgendamientoTagliacozzo
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class SeleccioneFecha : ContentPage
     {
-        public SeleccioneFecha()
+        public SeleccioneFecha(string usuario, string estudioenvia)
         {
             InitializeComponent();
+            lblestudio.Text = estudioenvia;
+            lblUser.Text = usuario;
         }
 
-        private void btnDisponibilidad_Clicked(object sender, EventArgs e)
+        private async void btnDisponibilidad_Clicked(object sender, EventArgs e)
         {
-
+            var usarioenvia = lblUser.Text;
+            var estudio = lblestudio.Text;
+            var data = DatePicker.DateProperty.DefaultValue.ToString();
+            var hora = TimePicker.TimeProperty.DefaultValue.ToString();
+            
+            await Navigation.PushAsync(new RegistroDatos(usarioenvia, estudio, data, hora));
         }
     }
 }

@@ -7,11 +7,20 @@ using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 using Xamarin.Essentials;
+using System.Net.Http;
+using System.Collections.ObjectModel;
+using Newtonsoft.Json;
+
 namespace AgendamientoTagliacozzo
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class Ingreso : ContentPage
     {
+        private const string Url = "http://192.168.1.43/moviles/post1.php";
+        private readonly HttpClient client = new HttpClient();
+        private ObservableCollection<AgendamientoTagliacozzo.DatosUsuario> _post;
+
+
         public Ingreso()
         {
             InitializeComponent();
@@ -23,12 +32,22 @@ namespace AgendamientoTagliacozzo
             string clave = txtDato2.Text;
             if (usuario == "estudiante2021" && clave == "uisrael2021")
             {
-                await Navigation.PushAsync(new PedidoMedico());
+                await Navigation.PushAsync(new PedidoMedico(usuario));
             }
             else
             {
                 await Navigation.PushAsync(new EnvioCorreo());
             }
+
+
+            var content = await client.GetStringAsync(Url);
+            List<AgendamientoTagliacozzo.DatosUsuario> posts = JsonConvert.DeserializeObject<List<AgendamientoTagliacozzo.DatosUsuario>>(content);
+            _post = new ObservableCollection<AgendamientoTagliacozzo.DatosUsuario>(posts);
+
+            MyListView.ItemsSource = _post;
+
+
+            
         }
 
         private async void btnUbicacion_Clicked(object sender, EventArgs e)

@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Linq;
+using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
 using Xamarin.Forms;
@@ -13,6 +15,10 @@ namespace AgendamientoTagliacozzo
     [DesignTimeVisible(false)]
     public partial class MainPage : ContentPage
     {
+
+        private const string Url = "http://192.168.1.43/moviles/crud.php";
+        private readonly HttpClient client = new HttpClient();
+        private ObservableCollection<AgendamientoTagliacozzo.DatosUsuario> _post;
         public MainPage()
         {
             InitializeComponent();

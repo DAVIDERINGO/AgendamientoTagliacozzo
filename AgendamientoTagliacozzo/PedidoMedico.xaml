@@ -8,7 +8,7 @@
             <Image Source="RIS_IBERIA.jpg"
                HeightRequest="150"
                HorizontalOptions="Center"/>
-
+            <Label x:Name="lblUser" Text="USUARIO" />
 
             <Frame BackgroundColor="Blue" Padding="24" CornerRadius="0">
 

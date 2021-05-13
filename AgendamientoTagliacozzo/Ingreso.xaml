@@ -9,7 +9,20 @@
 
        
         <StackLayout Margin="0,25,10,0">
-
+            <ListView x:Name="MyListView">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout>
+                                <Label x:Name="lblnombre" Text="{Binding nombre}">
+                                </Label>
+                                <Label x:Name="lblclave" Text="{Binding clave}">
+                                </Label>
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
             <Image Source="RIS_IBERIA.jpg"
                HeightRequest="150"
                HorizontalOptions="Center"/>
@@ -24,7 +37,9 @@
 
             </Frame>
 
-            <Entry x:Name="txtDato1" Placeholder="Ingrese Usuario" ></Entry>
+            
+
+                    <Entry x:Name="txtDato1" Placeholder="Ingrese Usuario" ></Entry>
             <Entry x:Name="txtDato2" Placeholder="Ingrese Clave" IsPassword="True"></Entry>
 
             <Button x:Name="btnValidar" Text="Validar" Clicked="btnValidar_Clicked"></Button>
