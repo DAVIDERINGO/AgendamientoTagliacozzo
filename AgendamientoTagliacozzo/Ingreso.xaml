@@ -7,7 +7,7 @@
              x:Class="AgendamientoTagliacozzo.Ingreso">
     <ContentPage.Content>
 
-       
+      
         <StackLayout Margin="0,25,10,0">
             <ListView x:Name="MyListView">
                 <ListView.ItemTemplate>
@@ -46,7 +46,9 @@
             <Entry Text="Advmedical" x:Name="txtNombreUbica"></Entry>
             <Label Text="Para encontrar nuestra ubicacion hacer clic en el boton ir a" />
             <Button x:Name="btnUbicacion" Text="Ir a" Clicked="btnUbicacion_Clicked"></Button>
+            <Button x:Name="btn_Registrar" Text="Registrar" BackgroundColor="DarkCyan" TextColor="White" Clicked="btn_Registrar_Clicked"/>
 
         </StackLayout>
+      
     </ContentPage.Content>
 </ContentPage>

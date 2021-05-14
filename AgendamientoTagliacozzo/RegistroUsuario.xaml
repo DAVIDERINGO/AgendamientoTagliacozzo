@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AgendamientoTagliacozzo.RegistroUsuario">
+    <ContentPage.Content>
+        <StackLayout>
+            
+
+            <Image Source="RIS_IBERIA.jpg"
+               HeightRequest="150"
+               HorizontalOptions="Center"/>
+
+
+            <Frame BackgroundColor="Blue" Padding="24" CornerRadius="0">
+
+                <Label Text="Bienvenido al sistema de agendamiento RIS (ADMINISTRADOR Ingrese nuevo usuario)" HorizontalTextAlignment="Center" TextColor="White"
+           HorizontalOptions="Center"
+           VerticalOptions="CenterAndExpand" />
+
+
+            </Frame>
+
+
+
+            <Entry Placeholder="Ingrese Nombre" x:Name="Nombre"/>
+            <Entry Placeholder="Ingrese Usuario" x:Name="Usuario"/>
+            <Entry Placeholder="Ingrese Contrasenia" Keyboard="Email" x:Name="Contrasenia"/>
+            <Button x:Name="btn_agregar" Text="Agregar" BackgroundColor="DarkCyan" TextColor="White" Clicked="btn_agregar_Clicked"/>
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
